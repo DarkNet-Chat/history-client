@@ -3,9 +3,26 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
-  "keywords": [
-    ""
-  ],
+  "scripts": {
+    "build": "webpack src/main.js dist/app.js && cp src/index.html dist/index.html",
+    "watch": "webpack --progress --colors --watch --content-base dist/ src/main.js dist/app.js"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.7",
+    "angular-animate": "^1.4.7",
+    "angular-aria": "^1.4.7",
+    "angular-material": "^0.11.4"
+  },
+  "devDependencies": {
+    "css-loader": "^0.21.0",
+    "debounce": "^1.0.0",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.1",
+    "lesshat": "^3.0.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  }
 }

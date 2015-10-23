@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="old-chat">
+<head>
+	<title></title>
+</head>
+<body ng-controller="main">
+	<div md-virtual-repeat-container>
+		<div md-virtual-repeat="item in chatItems" md-on-demand>
+
+			<div class="chatItem">
+				<div class="avatar">
+					<img ng-src="avatars/{{ item.user.avatar }}">
+				</div>
+				<div class="user">
+					<div class="timestamp">{{ item.timestamp * 1000 | date }}</div>
+					<div class="username">{{ item.user.name }}</div>
+				</div>
+				<div class="message">{{ item.message }}</div>
+			</div>
+
+		</div>
+	</div>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+@import "~angular-material/angular-material.min.css";
+@import "~lesshat/build/lesshat.less";
+
+body {
+	background: black;
+	color: white;
+
+	div[md-virtual-repeat-container] {
+		width: 100%;
+		height: 100%;
+
+		.chatItem {
+			margin: 0 20px;
+			clear: both;
+			margin-bottom: 15px;
+
+			.avatar {
+				background: purple;
+				width: 50px;
+				height: 50px;
+				float: left;
+
+				img {
+					max-width: 50px;
+					max-height: 50px;
+				}
+			}
+
+			.user {
+				background: #444;
+
+				.username {
+					margin-left: 1.3em;
+					opacity: 0.5;
+				}
+
+				.timestamp {
+					float: right;
+					margin-left: 5px;
+					opacity: 0.5;
+				}
+			}
+
+			.message {
+				font-size: 1.3em;
+				margin-left: 50px;
+				padding: 5px;
+				border: 1px solid #333;
+			}
+		}
+	}
+}
