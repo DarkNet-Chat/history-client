@@ -31,7 +31,7 @@ angular.module("old-chat", [ "ngMaterial" ])
 			},
 			getMoreChatItems: function() {
 				this.fetchingTimestamp = this.maxTimestamp;
-				$http.get("http://localhost:3482/after/" + this.maxTimestamp + "/40")
+				$http.get("data/after/" + this.maxTimestamp + "/40")
 				.then(function(res) {
 					res.data.forEach(function(line) {
 						line.user = users[line.userID];
